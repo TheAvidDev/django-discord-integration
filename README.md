@@ -4,7 +4,7 @@ Discord integration for Django, supporting error reporting via webhooks.
 
 ## Installation
 ```bash
-$ pip install django-discord-integration
+$ pip install git+https://github.com/TheAvidDev/django-discord-integration.git#egg=django-discord-integration
 ```
 
 In your `settings.py`, add the following:
