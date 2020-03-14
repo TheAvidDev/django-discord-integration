@@ -30,5 +30,6 @@ def discord_message(message):
     if 'timestamp' not in message:
         message['timestamp'] = timestamp()
 
+    message['embeds'][0]['description'] = '\n'.join(message['embeds'][0]['description'].split('\n',5)[:5])
     requests.post(data.webhook_url, data=json.dumps(message),
                   headers={'Content-Type': 'application/json'})
